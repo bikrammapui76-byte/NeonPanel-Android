@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
@@ -48,9 +49,9 @@ fun NeonPanel(){
             Text("NEON PANEL",color=Color.White,fontSize=28.sp,fontWeight=FontWeight.ExtraBold,letterSpacing=2.sp)
             Text("Control Panel",color=Muted,fontSize=13.sp)
             Spacer(Modifier.height(28.dp))
-            Feature("Feature A",a){a=!a;save("a",a)}
-            Feature("Feature B",b){b=!b;save("b",b)}
-            Feature("Feature C",c){c=!c;save("c",c)}
+            Feature("Feature A",a){a = !a;save("a",a)}
+            Feature("Feature B",b){b = !b;save("b",b)}
+            Feature("Feature C",c){c = !c;save("c",c)}
             Spacer(Modifier.height(22.dp))
             Button(onClick={reset()},modifier=Modifier.fillMaxWidth().height(52.dp),
                 shape=RoundedCornerShape(14.dp),
