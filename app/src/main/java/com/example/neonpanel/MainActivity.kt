@@ -70,7 +70,7 @@ fun Feature(title:String,checked:Boolean,onChange:()->Unit){
     val alpha by t.animateFloat(0.3f,0.85f,infiniteRepeatable(tween(900),RepeatMode.Reverse),label="alpha")
     val border by animateColorAsState(if(checked)Neon else Border,tween(250),label="border")
     Row(Modifier.fillMaxWidth().padding(vertical=7.dp)
-        .shadow(if(checked)14.dp,RoundedCornerShape(16.dp),ambientColor=Neon.copy(alpha=alpha),spotColor=Neon.copy(alpha=alpha))
+        .shadow(if(checked)14.dp else 0.dp,RoundedCornerShape(16.dp),ambientColor=Neon.copy(alpha=alpha),spotColor=Neon.copy(alpha=alpha))
         .background(Panel,RoundedCornerShape(16.dp)).padding(18.dp),
         verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.SpaceBetween){
         Column{
